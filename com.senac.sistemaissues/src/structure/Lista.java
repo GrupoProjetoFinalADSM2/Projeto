@@ -91,18 +91,18 @@ public class Lista<T> {
 		System.out.println(valores);
 	}
 
-	public No<T> procuraLista() {
-		No<T> temp = primeiro;
-		No<T> atual;
-		int contador = 0;
-		if (checkIfListaVazia() == false)  {
-			while (contador <= getTotalNos()) {
-				contador++;
-				atual = 
-				return atual;
-			}
-		} else {
-			return temp;
+	public No<T> procuraLista(int index) {
+		if (index <= 0) {
+			return null;
+		}
+		No<T> atual = primeiro.getProx();
+		for (int i = 1; i < index; i++) {
+			if (atual.getProx() == null) {
+				return null;
+			} 
+			atual = atual.getProx();
+		}
+		return atual.getValor();
 		}
 
 	}
