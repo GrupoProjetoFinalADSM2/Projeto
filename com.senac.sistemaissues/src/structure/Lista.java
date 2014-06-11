@@ -1,7 +1,5 @@
 package structure;
 
-
-
 public class Lista {
 	
 		   No primeiro,ultimo;
@@ -15,6 +13,8 @@ public class Lista {
 		   public int getTotalNos(){
 		       return totalNos;
 		   }
+		   
+		   
 
 		   public boolean checkIfListaVazia(){
 		       if (getTotalNos() == 0){
