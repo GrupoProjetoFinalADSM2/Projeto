@@ -33,8 +33,8 @@ public class UsuarioTests {
 		Usuarios user = new Usuarios ();
 		View view = new View ();
 		user.setNome("Joao");
-		view.entraDados();
-		assertTrue(user.equals(view.entraDados()));
+		view.login();
+		assertTrue(user.equals(view.login()));
 		
 	}
 

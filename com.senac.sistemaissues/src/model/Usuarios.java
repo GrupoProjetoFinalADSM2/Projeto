@@ -34,9 +34,7 @@ public class Usuarios {
 		this.senha = senha;
 	}
 	
-	public void userExiste () {
-		
-	}
+	
 	
 	
 	
