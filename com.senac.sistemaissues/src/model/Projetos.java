@@ -7,6 +7,16 @@ public class Projetos {
 	private String criador;
 	private String desenvolvedores;
 
+	
+	public Projetos(String nome, String descricao, String criador,
+			String desenvolvedores) {
+		
+		super();
+		this.nome = nome;
+		this.descricao = descricao;
+		this.criador = criador;
+		this.desenvolvedores = desenvolvedores;
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -31,7 +41,15 @@ public class Projetos {
 	public void setDesenvolvedores(String desenvolvedores) {
 		this.desenvolvedores = desenvolvedores;
 	}
-
+	@Override
+	public String toString() {
+		return "Projetos\nNome: " + nome + ""
+				+ "\nDescricao: " + descricao
+				+ "\nCriador: " + criador 
+				+ "\nDesenvolvedores: "+ desenvolvedores + "]"
+				+ "\n______________________________________";
+	}
+	
 
 
 }

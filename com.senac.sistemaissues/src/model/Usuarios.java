@@ -1,22 +1,35 @@
 package model;
 
-public class Usuarios {
+public class Usuarios{
 	
-	private String nome;
+	//private String nome;
 	private String username;
-	private int senha;
+	private String senha;
 	
-	public Usuarios () {
-		
+	public Usuarios() {
+		super();
+		//this.nome = nome;
+		this.username = username;
+		this.senha = senha;
+	}
+	
+	
+
+	
+	public Usuarios(String username, String senha) {
+		super();
+		//this.nome = nome;
+		this.username = username;
+		this.senha = senha;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+//	public String getNome() {
+//		return nome;
+//	}
+//
+//	public void setNome(String nome) {
+//		this.nome = nome;
+//	}
 
 	public String getUsername() {
 		return username;
@@ -26,11 +39,11 @@ public class Usuarios {
 		this.username = username;
 	}
 
-	public int getSenha() {
+	public String getSenha() {
 		return senha;
 	}
 
-	public void setSenha(int senha) {
+	public void setSenha(String senha) {
 		this.senha = senha;
 	}
 	
