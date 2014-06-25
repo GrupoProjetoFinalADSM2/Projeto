@@ -59,7 +59,8 @@ public class Issues{
 				+ "\nCriticidade: " + criticidade
 				+ "\nDescricao: " + descricao 
 				+ "\nTipo: " + tipo 
-				+ "\nStatus: "+ status + "]";
+				+ "\nStatus: "+ status + "]"
+				+ "\n______________________________________";
 	}
 	
 

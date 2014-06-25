@@ -25,6 +25,10 @@ public class Controller {
 	Lista2 listaProjetos = new Lista2();
 	Lista2 listaIssues = new Lista2();
 	
+	
+	
+	
+	
 	//______________________________________________________
 	public void login(){
 		
@@ -60,25 +64,7 @@ public class Controller {
 	}
 	//______________________________________________________
 	public void alterarProjeto(String nome_n){
-			Controller c = new Controller(); 
-	
-			String titulo = view2.adicionarIssues();
-			String criticidade = view2.informeCriticidadeIssue();
-			String descricao = view2.descricaoIssues();
-			String status = view2.issuesStatus();
-			String tipo = view2.issuesTipo();
-			
-			Issues issues = new Issues(titulo, criticidade, descricao, tipo , status);
-			
-			listaIssues.inserirNoInicio(new No(issues));
-			
-			listaProjetos.exibirLista();
-			listaIssues.exibirLista();
 		
-			
-		}
-	//______________________________________________________
-	public void criarProjeto(){
 		Controller c = new Controller(); 
 		
 		String nome_novo = view1.criarProjeto();
@@ -86,15 +72,51 @@ public class Controller {
 		String criador = view1.criadorProjeto();
 		String desenvolvedor = view1.desenvolvedoresProjeto();
 		
-		
 		Projetos p = new Projetos(nome_novo, descricao, criador, desenvolvedor);
+		
 		listaProjetos.inserirNoInicio(new No(p));
 		
+		
+		listaProjetos.exibirLista();	
+		
+			
+		}
+	//______________________________________________________
+	public void criarProjeto(){
+		
+		Controller c = new Controller(); 
+		
+		String nome_novo = view1.criarProjeto();
+		String descricao = view1.descricaoProjeto();
+		String criador = view1.criadorProjeto();
+		String desenvolvedor = view1.desenvolvedoresProjeto();
+		
+		Projetos p = new Projetos(nome_novo, descricao, criador, desenvolvedor);
+		
+		listaProjetos.inserirNoInicio(new No(p));
+		 
+		
+		
 		listaProjetos.exibirLista();
-		c.alterarProjeto(nome_novo);
+		
 	}
 	//______________________________________________________
-	
+	public void criarIssues(){
+		Controller c = new Controller(); 
+		
+		String titulo = view2.adicionarIssues();
+		String criticidade = view2.informeCriticidadeIssue();
+		String descricao = view2.descricaoIssues();
+		String status = view2.issuesStatus();
+		String tipo = view2.issuesTipo();
+		
+		Issues issues = new Issues(titulo, criticidade, descricao, tipo , status);
+		
+		listaIssues.inserirNoInicio(new No(issues));
+		
+		listaProjetos.exibirLista();
+		//listaIssues.exibirLista();
+	}
 }
 
 
