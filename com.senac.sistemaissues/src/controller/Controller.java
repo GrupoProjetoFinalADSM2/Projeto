@@ -19,9 +19,7 @@ public class Controller {
 	View_Projetos view1 = new View_Projetos();
 	View_Issues view2 = new View_Issues();
 	View_Login view3 = new View_Login();
-//	Lista1 listaUser = new Lista1();
-//	Lista1 listaProjetos = new Lista1();
-//	Lista1 listaIssues = new Lista1();
+
 	
 	Lista2 listaUser = new Lista2();
 	Lista2 listaProjetos = new Lista2();
@@ -62,20 +60,23 @@ public class Controller {
 	}
 	//______________________________________________________
 	public void alterarProjeto(String nome_n){
-		
+			Controller c = new Controller(); 
 	
 			String titulo = view2.adicionarIssues();
 			String criticidade = view2.informeCriticidadeIssue();
-			String descricao = view2.issuesTipo();
-			String tipo = view2.issuesTipo();
+			String descricao = view2.descricaoIssues();
 			String status = view2.issuesStatus();
+			String tipo = view2.issuesTipo();
 			
 			Issues issues = new Issues(titulo, criticidade, descricao, tipo , status);
+			
 			listaIssues.inserirNoInicio(new No(issues));
+			
+			listaProjetos.exibirLista();
+			listaIssues.exibirLista();
 		
-		
-		
-	}
+			
+		}
 	//______________________________________________________
 	public void criarProjeto(){
 		Controller c = new Controller(); 
@@ -92,7 +93,7 @@ public class Controller {
 		listaProjetos.exibirLista();
 		c.alterarProjeto(nome_novo);
 	}
-	
+	//______________________________________________________
 	
 }
 

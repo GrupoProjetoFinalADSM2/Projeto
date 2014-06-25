@@ -32,7 +32,11 @@ public class View_Issues {
 			return w;
 		}
 	//______________________________________________________
-		
+		public String descricaoIssues(){
+			System.out.println("Informe a descricao da Issues:");
+			String descricaoIssues = leia.next();
+			return descricaoIssues;
+		}
 	//______________________________________________________
 		
 		public String issuesStatus(){
@@ -49,6 +53,7 @@ public class View_Issues {
 		}
 	//______________________________________________________  
 		public String issuesTipo(){
+			System.out.println("Escreva o tipo por extenso:");
 			System.out.println("1 - Bug");
 			System.out.println("2 - Enhancement");
 			String v = leia.next();

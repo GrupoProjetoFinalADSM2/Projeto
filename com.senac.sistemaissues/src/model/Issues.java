@@ -7,7 +7,7 @@ public class Issues{
 	private String titulo;
 	private String criticidade;
 	private String descricao;
-	private Date dataCriacao;
+	
 	private String tipo;
 	private String status;
 
@@ -39,12 +39,7 @@ public class Issues{
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public Date getDataCriacao() {
-		return dataCriacao;
-	}
-	public void setDataCriacao(Date dataCriacao) {
-		this.dataCriacao = dataCriacao;
-	}
+	
 	public String getTipo() {
 		return tipo;
 	}
@@ -57,7 +52,16 @@ public class Issues{
 	public void setStatus(String status) {
 		this.status = status;
 	}
-
+	@Override
+	public String toString() {
+		return "Issues "
+				+ "\n[Titulo: " + titulo + ", "
+				+ "\nCriticidade: " + criticidade
+				+ "\nDescricao: " + descricao 
+				+ "\nTipo: " + tipo 
+				+ "\nStatus: "+ status + "]";
+	}
+	
 
 
 }
