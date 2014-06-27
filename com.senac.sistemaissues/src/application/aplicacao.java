@@ -12,11 +12,13 @@ public class Aplicacao {
 
 		
 		Controller vai = new Controller();
-		
-		vai.login();
-		vai.mostraListaDeProjetos();
-		vai.menuAlterarCriarExcluir();
-		
+		int x = 0;
+		int cont = 0;
+		while(x<10){
+			vai.login();
+			vai.menuAlterarCriarExcluir();
+		cont++;
+		}
 	}
 
 }

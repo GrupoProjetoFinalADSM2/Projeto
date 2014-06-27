@@ -43,7 +43,7 @@ public class Projetos {
 	}
 	@Override
 	public String toString() {
-		return "Projetos\n[Nome: " + nome + ""
+		return "Projeto\n[Nome: " + nome + ""
 				+ "\nDescricao: " + descricao
 				+ "\nCriador: " + criador 
 				+ "\nDesenvolvedores: "+ desenvolvedores + "]"

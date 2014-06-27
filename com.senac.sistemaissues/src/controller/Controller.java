@@ -32,18 +32,16 @@ public class Controller {
 	//______________________________________________________
 	public void login(){
 		
-				String user = view3.login();
-				String login = view3.CadastrarUsuario();
-				String senha = view3.CadastrarSenha();
+		String user = view3.login();
+		String login = view3.CadastrarUsuario();
+		String senha = view3.CadastrarSenha();
 				
-				Usuarios user1 = new Usuarios(login, senha);
-				listaUser.inserirNoInicio(new No(user1));
+		Usuarios user1 = new Usuarios(login, senha);
+		listaUser.inserirNoInicio(new No(user1));
 	
 	}
 	//______________________________________________________
-	public void mostraListaDeProjetos(){
-		listaProjetos.exibirLista();
-	}
+	
 	//______________________________________________________
 	public void menuAlterarCriarExcluir(){
 		Controller altera = new Controller();
@@ -91,13 +89,14 @@ public class Controller {
 		String criador = view1.criadorProjeto();
 		String desenvolvedor = view1.desenvolvedoresProjeto();
 		
-		Projetos p = new Projetos(nome_novo, descricao, criador, desenvolvedor);
+		Projetos p1 = new Projetos(nome_novo, descricao, criador, desenvolvedor);
 		
-		listaProjetos.inserirNoInicio(new No(p));
+		listaProjetos.inserirNoInicio(new No(p1));
 		 
 		
 		
 		listaProjetos.exibirLista();
+		c.criarIssues();
 		
 	}
 	//______________________________________________________
@@ -114,8 +113,9 @@ public class Controller {
 		
 		listaIssues.inserirNoInicio(new No(issues));
 		
-		listaProjetos.exibirLista();
-		//listaIssues.exibirLista();
+		//listaProjetos.exibirLista();
+		listaIssues.exibirLista();
+		c.menuAlterarCriarExcluir();
 	}
 }
 
